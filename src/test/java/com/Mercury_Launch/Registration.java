@@ -4,12 +4,14 @@ import org.testng.annotations.Test;
 
 
 public class Registration extends Base{
+
+	Base base = new Base ();
 	
-	@Test
+	//@Test
 
 	public void test() throws InterruptedException {
 		
-		Base base = new Base ();
+
 		
 		base.getWebDriver();
 		
@@ -20,6 +22,15 @@ public class Registration extends Base{
 		Thread.sleep(2000);
 		
 		base.flightBooking();
+
+	}
+
+	@Test
+
+	public void fillForm() {
+		base.getWebDriver();
+
+		base.toolsQaformFillup();
 
 	}
 
